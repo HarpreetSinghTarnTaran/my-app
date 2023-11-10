@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   StyleSheet,
   Text,
@@ -14,6 +14,7 @@ import { AntDesign } from "@expo/vector-icons";
 const { height, width } = Dimensions.get("window");
 
 const SignUp = ({navigation}) => {
+  const [value, setValue] = useState({name:"",mobileNumber:"",password:"",confirmPassword:""})
   const handleChange=(e)=>{
     console.log('eeeeee', e)
 
@@ -25,10 +26,10 @@ const SignUp = ({navigation}) => {
       <Text style={styles.txt}>SignUP</Text>
 
       <View style={styles.input}>
-        <Input placeholder="Enter Name" onChangeText={handleChange} />
-        <Input placeholder="Enter mobile number" keyboardType="numeric" />
-        <Input placeholder="Create password" keyboardType="numeric" />
-        <Input placeholder="Confirm password" keyboardType="numeric" />
+        <Input name="name" placeholder="Enter Name" onChangeText={handleChange} />
+        <Input name="mobileNumber" placeholder="Enter mobile number" keyboardType="numeric" />
+        <Input name="password" placeholder="Create password" keyboardType="numeric" />
+        <Input name="confirmPassword" placeholder="Confirm password" keyboardType="numeric" />
       </View>
 
       <View>

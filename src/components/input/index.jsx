@@ -6,7 +6,7 @@ const Input = ({
   keyboardType,
   secureTextEntry,
   onChangeText,
-  value
+  value,name
 }) => {
   return (
     <View>
@@ -17,6 +17,7 @@ const Input = ({
         secureTextEntry={secureTextEntry}
         onChangeText={onChangeText}
         value={value}
+        name={name}
       />
     </View>
   );
